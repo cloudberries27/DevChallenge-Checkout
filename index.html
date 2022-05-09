@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,
+  maximum-scale=5"
+    />
+
+    <link rel="icon" href="devchallenges.png" />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://devchallenges.io/"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+
+    <title>Checkout Page</title>
+
+    <link href="style.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="container">
+      <h1>Checkout</h1>
+      <div class="content">
+        <form class="contact" onsubmit="return confirm('Success!');">
+          <p>Contact Information</p>
+
+          <label>E-mail</label>
+          <div class="input-icon">
+            <span class="material-icons">email</span>
+            <input required type="email" placeholder="Enter your email..."/>
+          </div>
+          <label>Phone</label>
+          <div class="input-icon">
+            <span class="material-icons">phone</span>
+            <input required type="phone" placeholder="Enter your phone..."/>
+          </div>
+
+          <p>Shipping Address</p>
+          
+          <label>Full Name</label>
+          <div class="input-icon">
+            <span class="material-icons">account_circle</span>
+            <input required type="text" placeholder="Enter your name..." value="Rodney Cotton"/>
+          </div>
+          <label>Address</label>
+          <div class="input-icon">
+            <span class="material-icons">home</span>
+            <input required type="text" placeholder="Your address..."/>
+          </div>
+          <label>City</label>
+          <div class="input-icon">
+            <span class="material-icons">location_city</span>
+            <input required type="text" placeholder="Your city..."/>
+          </div>
+          <div class="postal">
+            <div class="input">
+              <label fo="country">Country</label>
+              <div class="input-icon">
+                <span class="material-icons">public</span>
+                <select name="country">
+                  <option value="USA">United States</option>
+                  <option value="Spain">Spain</option>
+                  <option value="France">France</option>
+                </select>
+              </div>
+            </div>
+            <div class="input">
+              <label>Postal Code</label>
+              <div class="input-icon">
+                <span class="material-icons">markunread_mailbox</span>
+                <input required type="text" placeholder="Your postal code..."/>
+              </div>
+            </div>
+          </div>
+          <div class="checkmark">
+            <input type="checkbox"/>
+            <label>Save this information for next time</label>
+          </div>
+          <button type="submit">Continue</button>
+        </form>
+        <div class="cart">
+          <div class="item">
+            <img src="photo1.png"/>
+            <div class="details">
+              <p>Vintage Backpack</p>
+              <div class="prices">
+                <p class="price">$54.99</p> 
+                <p class="og-price">$94.99</p>
+              </div>
+              <div class="quantity">
+                <button onclick="decrement1()">-</button>
+                <input id="quantity1" value="1" type="number" min="1" readonly>
+                <button onclick="increment1()">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="photo2.png"/>
+            <div class="details">
+              <p>Levi Shoes</p>
+              <div class="prices">
+                <p class="price">$74.99</p> 
+                <p class="og-price">$124.99</p>
+              </div>
+              <div class="quantity">
+                <button onclick="decrement2()">-</button>
+                <input id="quantity2" value="1" type="number" min="1" readonly>
+                <button onclick="increment2()">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="totals">
+            <p>Shipping</p><p>$19</p>
+          </div >
+          <div class="totals">
+            <p>Total:</p><p>$148.98</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <script>
+      function increment1() {
+         document.getElementById('quantity1').stepUp();
+      }
+      function decrement1() {
+         document.getElementById('quantity1').stepDown();
+      }
+      function increment2() {
+         document.getElementById('quantity2').stepUp();
+      }
+      function decrement2() {
+         document.getElementById('quantity2').stepDown();
+      }
+   </script>
+  </body>
+</html>

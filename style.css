@@ -1,0 +1,162 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Nunito Sans', sans-serif;
+  }
+  .material-icons.md-36 { 
+    font-size: 36px; 
+    margin: 0 10px;
+  }
+  .container{
+    max-width: 1000px;
+    padding: 0 2em;
+    margin: 0 auto;
+  }
+  .content{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+  }
+  .content .contact{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  .content .contact .postal{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .content .contact .postal .input{
+    width: -webkit-fill-available;
+  }
+  .content .contact .checkmark{
+    display: flex;
+    padding: 10px 0;
+  }
+  .content .contact input[type="checkbox"]{
+    margin: 6px;
+  }
+  .content .contact button{
+    width: 30%;
+    align-self: flex-end;
+    padding: 15px;
+    border: none;
+    background: orange;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: white;
+  }
+  .content .contact label{
+    font-size: 12px;
+    padding: 5px 0;
+  }
+  .content .contact .input-icon {
+    position: relative;
+  }
+  .content .contact .input-icon span {
+    position: absolute;
+    padding: 12px 10px;
+    color: #aaa;
+  }
+  .content .contact .input-icon input, .content .contact .input-icon select{
+    padding: 14px;
+    width: -webkit-fill-available;
+    padding-left: 40px;
+    border-radius: 10px;
+    border: 2px solid darkgray;
+  }
+  .content .cart{
+    background-color: rgb(237, 236, 236);
+    border-radius: 10px;
+    height: -webkit-fill-available;
+  }
+  .cart .item{
+    display: flex;
+  }
+  .cart .item img{
+    width: 150px;
+    height: auto;
+    margin: 20px;
+    border-radius: 10px;
+  }
+  .cart .item .details{
+    margin: 20px;
+    margin-left: 0;
+  }
+  .cart .item .details p{
+    margin: 0;
+  }
+  .cart .item .details .quantity{
+    display: flex;
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+  .cart .item .details .quantity button{ 
+    background: #dbdbdb;
+    border: none;
+  }
+  .cart .item .details .quantity input{
+    text-align: center;
+    background: none;
+    border: none;
+    font-size: 20px;
+    width: 75px;
+  }
+  .cart .item .prices{
+    display: flex;
+    margin-top: 5px;
+  }
+  .cart .item .prices .price{
+    color: orange;
+  }
+  .cart .item .prices .og-price{
+    font-size: 14px;
+    text-decoration: line-through;
+    margin: auto 10px;
+  }
+  .cart .totals{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid black;
+    padding: 5px 0;
+    margin: 10px 20px;
+  }
+  .cart .totals p{
+    margin: 0;
+  }
+  @media screen and (max-width: 1000px){
+    .content .contact .postal {
+      flex-wrap: wrap;
+      gap: 0;
+    }
+    .content .contact .postal .input{
+      width: -webkit-fill-available;
+    }
+  }
+  @media screen and (max-width: 800px){
+    .container{
+      padding: 0 1em;
+    }
+    .content{
+      gap:20px
+    }
+    .content .contact button{
+      width: 50%;
+    }
+  }
+  @media screen and (max-width: 600px){
+    .content{
+      flex-wrap: wrap-reverse;
+    }
+    .content .contact{
+      width: 100%;
+    }
+    .content .cart{
+      width: -webkit-fill-available;
+    }
+  }
