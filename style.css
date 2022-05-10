@@ -129,6 +129,13 @@ html, body{
   .cart .totals p{
     margin: 0;
   }
+ footer{
+    text-align: center;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    margin: 10px 0;
+  }
   @media screen and (max-width: 1000px){
     .content .contact .postal {
       flex-wrap: wrap;
@@ -158,5 +165,9 @@ html, body{
     }
     .content .cart{
       width: -webkit-fill-available;
+    }
+    footer{
+      position: unset;
+      bottom: unset
     }
   }
